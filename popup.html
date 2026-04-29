@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LinkSieve</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <!-- Status card -->
+  <div id="status-card">
+    <div class="status-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    </div>
+    <div class="status-text">
+      <div class="status-title">LinkSieve</div>
+      <div id="status-subtitle">Filtering 0 companies on this page</div>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="enabled-toggle" checked />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- Filter toggles -->
+  <div id="filters-section">
+    <div class="filter-row">
+      <span>Hide jobs I've applied to</span>
+      <label class="switch switch-sm">
+        <input type="checkbox" id="hide-applied-toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Blocked companies -->
+  <div id="companies-section">
+    <div class="section-header">
+      <span class="section-label">Blocked Companies</span>
+      <span id="count-badge">0</span>
+    </div>
+
+    <div class="search-row">
+      <span class="search-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+      </span>
+      <input type="text" id="company-input" placeholder="Search or block a company…" autocomplete="off" />
+      <span id="already-blocked-badge" class="hidden">Already blocked</span>
+      <button id="block-btn" class="hidden" type="button"></button>
+      <button id="clear-btn" class="hidden" type="button" title="Clear">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="chip-cloud"></div>
+  </div>
+
+  <!-- Undo footer -->
+  <div id="undo-footer" class="hidden">
+    <span id="undo-text"></span>
+    <button id="undo-btn" type="button">Undo</button>
+    <button id="undo-close" type="button" title="Dismiss">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

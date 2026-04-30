@@ -44,7 +44,7 @@ Toggle the **Developer mode** switch in the top-right corner of the Extensions p
 **4. Load the extension**
 
 Click **Load unpacked**, then select the folder that contains `manifest.json`
-(the root of this repo — `linkedin-filter-tools/`).
+(the root of this repo — `LinkSieve/`).
 
 **5. Done**
 
